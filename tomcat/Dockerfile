@@ -1,0 +1,2 @@
+FROM tomcat:9
+ADD  sample.war /usr/local/tomcat/webapps/
