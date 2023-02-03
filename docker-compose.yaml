@@ -1,0 +1,15 @@
+services:
+  tomcat:
+    image: tomcat:9.0
+    volumes:
+    - /home/choverivan/Examen_PPS/sample.war:/usr/local/tomcat/webapps/sample.war
+    container_name: aplicacionjava
+
+  nginx:
+    image: nginx
+    container_name: nginx
+    volumes: 
+    -  /home/choverivan/Examen_PPS/default.conf:/etc/nginx/conf.d/default.conf
+    ports:
+    - 8078:80
+
